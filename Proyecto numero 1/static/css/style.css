@@ -1,0 +1,65 @@
+    /*Hoja de estilo*/
+    *{
+        margin: 0; /*margin establece el margen para los cuatro lados*/
+        padding: 0; /*padding establece el espacio de relleno*/
+        /*background-color: beige; /*cambia el color de relleno*/
+        /*font-family: Verdana; /*cambia el tipo de letra*/
+        box-sizing: border-box;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    h1{
+        color: rgb(0, 0, 0);
+        padding: 2vw 50vw ;
+        
+    }
+
+    /* selector por id */
+    #banner {
+        /* background-image: url("../img/banner-libreria.jpg"); */
+        background-size: cover;
+        height: 100px;
+    }
+
+    #search div {
+        /* border: 2px solid red; */
+        padding: 20px;
+        /* background-image: url(../img/banner-libreria.jpg); */
+        width: 400px;
+        margin: auto;
+    }
+#search div input{
+    margin: auto;
+    width: 400px;
+    height: 30px;
+    border-radius: 25px;
+}
+    /* #search h2 {
+        border: 2px dotted green;
+        width: 500px;
+        margin: auto;
+    } */
+
+
+
+    
+
+    header{
+        background-color: rgb(207, 123, 83);
+        /* background-image: url(../img/banner-libreria.jpg); */
+        size: 60px;
+        border: 4px double black;
+
+    }
+    
+    body{
+        background-color: #fff;
+        /* background-image: url(../img/banner-libreria.jpg); */
+    }
+
+    footer {
+        background-color: rgb(207, 123, 83);
+        border: 4px double black;
+    }
