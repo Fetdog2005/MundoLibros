@@ -7,17 +7,59 @@
         box-sizing: border-box;
         font-family: Calibri, 'Trebuchet MS', sans-serif;
     }
+
+    body{
+        background-color: #D4F5D5;
+        font-size: 25px;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+        /* background-image: url(../img/banner-libreria.jpg); */
+    }
+
     a {
         text-decoration: none;
         color: black;
+        font-size: 20px;
+    }
+
+    header{
+        position: fixed;
+        /* la ser fixed y nos er static pierde el valor de width al 100% que viene por defectoo */
+        width: 100%;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        /* background-color: #6CB06D; */
+        /* background-image: url(../img/banner-libreria.jpg); */
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 10px;
+        height: 55px;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+        z-index: 1;
     }
 
     #logo {
         font-weight: bold;
+        /* text-align: center; */
+        padding: 5px;
+    }
+
+    /* #logo {
+        font-weight: bold;
         text-align: center;
         font-size: 30px;
         padding: 5px;
-    }
+    } */
 
     /* h1{
         color: rgb(0, 0, 0);
@@ -25,62 +67,220 @@
         
     } */
 
+    .btn-primary{
+        background-color: #63A964;
+        padding: 10px;
+        border-radius: 10px;
+        color: black;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover{
+        color: #3F6F40;
+        border: 2px solid #3F6F40 ;
+        transition: color 3s ease;
+    }
+
     /* selector por id */
     #banner {
-        background-image: url("../img/banner-libreria.jpg");
+        background-image: url("../img/imagenlibro.jpg");
         background-size: cover;
         height: 500px;
         background-position: center;
-        text-align: center;
-        font-size: 30px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
 
+    .scrolled{
+        background-color: #63A964;
     }
 
     #search div {
-        /* border: 2px solid red; */
         padding: 20px;
-        /* background-image: url(../img/banner-libreria.jpg); */
         width: 400px;
         margin: auto;
         text-align: center;
     }
-#search div input{
-    margin: auto;
-    width: 400px;
-    height: 30px;
-    border-radius: 25px;
-    border: 2px solid;
-    padding-left: 10px;
-}
+
+    #search div input{
+        margin: auto;
+        width: 400px;
+        height: 30px;
+        border-radius: 25px;
+        border: 2px solid;
+        padding-left: 10px;
+    }
     /* #search h2 {
         border: 2px dotted green;
         width: 500px;
         margin: auto;
     } */
 
+    #trending {
+        text-align: center;
+    }
 
+    #recommendations {
+        text-align: center;
+    }
 
-    
+    .grilla-books{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        padding-left: 100px;
+    }
 
-    header{
+    .book-item {
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        width: 200px;
+        height: 300px;
+        border-radius: 20px;
+    }
+
+    .book-item-img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .book-item-detail{
         background-color: #6CB06D;
-        /* background-image: url(../img/banner-libreria.jpg); */
-        size: 60px;
+        position: absolute;
+        bottom: -100%;
+        width: 100%;
+        max-height: 85%;
+        transition: bottom 0.5s ease-in-out;
+    }
 
+    .book-item:hover{
+        opacity: 0.9;
     }
     
-    body{
-        background-color: #fff;
-        font-family: Calibri, 'Trebuchet MS', sans-serif;
-        /* background-image: url(../img/banner-libreria.jpg); */
+    .book-item:hover .book-item-detail{
+        bottom: 0;
     }
+
+    
 
     footer {
         background-color: #6CB06D;
         border: 4px double black;
+        color: white;
+        padding: 20px;
     }
-    footer a {
-        padding: 5px 10px;
-        text-decoration: none;
-        font-weight: bold;
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
     }
+    
+    .social-icons {
+        display: inline-block;
+
+    }
+    
+    .social-icons a {
+        display: block;
+        color: white;
+        margin-bottom: 5px;
+    }
+    
+    .social-icons img {
+        width: 20px; /* Ajusta el tamaño de las imágenes según tus preferencias */
+    }
+    
+    .footer-links {
+        display: inline-block;
+    }
+    
+    .footer-links a {
+        color: white;
+        margin-right: 20px;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+    
+    .popup-contenido {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        color: black;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 80%;
+        max-height: 80%;
+        overflow-y: auto;
+        text-align: center;
+    }
+    
+    .popup-contenido h2 {
+        margin-top: 0;
+    }
+    
+    .popup-contenido button {
+        padding: 20px 40px;
+        margin-top: 20px;
+        background-color: #6CB06D;
+        color: #f8f8f8;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .popup-contenido button:hover {
+        background-color: #6CB06D;
+    }
+
+    /* TABLETS */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+    h1{
+        font-size: 3vw;
+    }
+    #banner{
+        height: 400px;
+    }
+    #search{
+        height: 200px;
+    }
+    }
+
+    /* CELULARES */
+    @media screen and (min-width: 450px) and (max-width: 767px) {
+    .login-text {
+        /* visibility: hidden; */
+        display: none;
+    }
+    #banner{
+        height: 400px;
+    }
+    .grilla-books{
+        /* display: grid; */
+        grid-template-columns: repeat(2,1fr);
+    }
+    }
+
+    @media screen and (max-width: 449px) {
+    #banner{
+        height: 200px;
+        background-size: cover;
+        width: 500px;
+    }
+    .grilla-books{
+        display: block;
+    }    
+    }
+

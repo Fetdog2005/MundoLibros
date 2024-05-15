@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="book icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/contacto.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+
+<body>
+    <nav id="nav" class="nav-contact">
+            <a href="../index.html" class="texto">
+             <i class="fas fa-arrow-left"></i>
+                Inicio
+            </a>
+    </nav>
+<form Id="formContacto" novalidate action="#">
+    <div id="formulario">
+        <h1>Contact Me</h1>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="nombre" id="nombre" required>
+                </td>
+                <td><input type="text" id="apellido" required></td>
+            </tr>
+            <tr>
+                <th colspan="2">Email</th>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="email" id="email" required></td>
+            </tr>
+            <tr>
+                <th colspan="2">Área</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="area">
+                        <option value="administracion">Administración</option>
+                        <option value="hhrr">Recursos Humanos</option>
+                        <option value="it">Tecnologías de la Información</option>
+                        <option value="otra">Otra</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Mensaje:</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea type="text" id="mensaje" required></textarea>
+                </td>
+            </tr>      
+        </table>
+        <div class="error-message" id="errores"></div>
+        <button id="enviar">Enviar</button>
+    </div>
+</form>
+<script src="../static/JavaScript/Contacto.js"></script>
+
+</body>
+
+</html>

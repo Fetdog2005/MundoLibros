@@ -1,0 +1,67 @@
+body {
+    /*background-color: #f0f0f0;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../img/imagenlibro.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#formulario {
+    background-color: #d9f8cf;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+table {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+th {
+    background-color: #6CB06D;
+}
+
+input[type="email"],
+select, textarea {
+    width: 100%;
+    padding-right: 0px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6CB06D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #88bb89;
+}
+.nav-contact{
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+}
+.texto{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
