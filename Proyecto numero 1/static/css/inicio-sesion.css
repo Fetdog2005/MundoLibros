@@ -8,13 +8,13 @@
     font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body{
+body{   
     background-color: #D4F5D5;
-    font-size: 25px;
+    font-size: 20px;
     font-family: Calibri, 'Trebuchet MS', sans-serif;
-    /* background-image: url(../img/banner-libreria.jpg); */
 }
 .login-container {
+    
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -25,6 +25,7 @@ body{
     margin-bottom: 20px;
 }
 .login-container input[type="text"],
+
 .login-container input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -96,10 +97,6 @@ nav ul {
     color: #3F6F40;
     border: 2px solid #3F6F40 ;
     transition: color 3s ease;
-}
-
-.scrolled{
-    background-color: #63A964;
 }
 
 footer {
